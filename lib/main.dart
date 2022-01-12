@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-//import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'dart:convert';
-//import 'package:http/http.dart';
+import 'package:http/http.dart';
 //import 'lib.dart';
 void main() => runApp(
   const MaterialApp(
@@ -56,16 +56,12 @@ void iniState(){
   @override
   Widget build(BuildContext context){
      var FontAwesomeIcons;
-    // var faIcon = FaIcon;
-    // var faIcon2 = FaIcon;
-    // var faIcon3 = FaIcon;
-    // var faIcon4 = FaIcon;
     return Scaffold(
       body: Column(
         children: <Widget>[
           Container(
             height: MediaQuery.of(context).size.height / 3,
-            width: MediaQuery.of(context).size.width,
+            width: MediaQuery.of(context).size.width, 
             color: Colors.red,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -85,8 +81,8 @@ void iniState(){
 
                 ),
                  Text(
-                  // temp!=null? temp.toString()+ "\u00B0":"Loading",
-                  "52\u00B0",
+                   //temp!=null? temp.toString()+ "\u00B0":"Loading",
+                "52\u00B0",
                  style: TextStyle(
                    color: Colors.white,
                    fontSize: 40.0,
@@ -118,25 +114,25 @@ void iniState(){
               child: ListView(
                 children: <Widget>[
                   ListTile(
-                  //  leading: faIcon(FontAwesomeIcons.thermometerHalf),
+                  leading: FaIcon(FontAwesomeIcons.thermometerFull),
                     title: const Text("Temperature"),
                     trailing: Text(temp !=null ? temp.toString() + "\u00B0" : "Loading"),
                     
                   ),
                    ListTile(
-                  //  leading: faIcon3(FontAwesomeIcons.cloud),
+                  leading: FaIcon(FontAwesomeIcons.cloud),
                     title: const Text("weather"),
                     trailing: Text(description != null ? description.toString() : "Loading"),
                     
                   ),
                    ListTile(
-                   // leading: faIcon2(FontAwesomeIcons.sun), 
+                   leading: FaIcon(FontAwesomeIcons.sun), 
                     title: const Text("Humidity"),
                     trailing: Text(humidity != null ? humidity.toString() : "Loading"),
                     
                   ),
                    ListTile(
-                  //  leading: faIcon(FontAwesomeIcons.wind),
+                  leading: FaIcon(FontAwesomeIcons.wind),
                     title: const Text("Wind Speed"),
                     trailing: Text(windSpeed != null ? windSpeed.toString() : "Loading"),
                     
